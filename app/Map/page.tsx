@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import {
   GoogleMap,
@@ -16,7 +18,8 @@ const Map: React.FC = () => {
   const [places, setPlaces] = useState<any[]>([]);
 
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY as string,
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string,
+
     libraries,
   });
 
@@ -36,7 +39,7 @@ const Map: React.FC = () => {
     const request = {
       location,
       radius: 10000, // 10 km
-      type: ['hospital'],
+      type: 'hospital',
       keyword: 'cancer',
     };
 

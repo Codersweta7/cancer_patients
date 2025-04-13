@@ -1,6 +1,6 @@
 
 
-import React from 'react';  // yha pe react import kiya gya h
+import React, { JSX } from 'react';  // yha pe react import kiya gya h
 import { Navigate } from 'react-router-dom';  // website mein move karte h n routes pe uske liye h
 import { useSelector } from 'react-redux';    // yeh kaam krega redux se data uthane ka
 import { RootState } from '../../lib/store';  //yeh typescript ke liye h , kyuki humein redux store ka sahi type mile
@@ -9,7 +9,7 @@ import { RootState } from '../../lib/store';  //yeh typescript ke liye h , kyuki
 //ab yha components ke props (properties) ko define kia gya h 
 
 interface Props {
-  children: JSX.Element;  //children(jin components ko protect krna h)
+  children:JSX.Element;  //children(jin components ko protect krna h)
   allowedRoles?: string[];  // yeh role based access ke liye h ki patient h ya doctor.
 }
 

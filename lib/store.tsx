@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';  // yeh function redux create store create karane me help krta h 
 // import authReducer from './authSlice';    //          // yaha hum authentication ke ek slice ko import kr rhe .
-import authReducer from '../features/auth/authslice';
+import authReducer from '../features/auth/authslice'
 export const store = configureStore({              // yaha yeh function redux store kr rha  and tell it to manage auth slice using authReducer.
   reducer: {
     auth: authReducer,

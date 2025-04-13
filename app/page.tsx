@@ -1,12 +1,12 @@
 "use client";
 import {BrowserRouter as Router,Routes,Route } from 'react-router-dom';
-import Login from './Login/Login';
-import Register from './Register/Register';
-import PatientDashboard from './Dashboard/Patient';
-import DoctorDashboard from './Dashboard/Doctor';
+import Login from './Login/page';
+import Register from './Register/page';
+import PatientDashboard from './Patient/page';
+import DoctorDashboard from './Doctor/page';
 import ProtectedRoute from '@/features/auth/Protected';
-import Chat from './Dashboard/Chat';
-import Map from './Map/Map';
+import Chat from './Chat/page';
+import Map from './Map/page';
 
 const App: React.FC = () => {
   return (
